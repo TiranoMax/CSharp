@@ -1,15 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aula_0705
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
+    class Program{
+
+        static void Main(string[] args){
+
+            int a = 10;
+            int b = 20;
+
+            Console.WriteLine("Hello World");
+            Console.WriteLine("soma entre A e B: "+(a + b));
+
+            if (Console.CapsLock)
+                Console.WriteLine("capslock ativado");
+            else
+                Console.WriteLine("capslock desativado");
+
+            do {
+                
+    
+            } while (a == 20);
+
+
+            Console.ReadKey();
+            
+
         }
     }
 }
