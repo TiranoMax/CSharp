@@ -1,5 +1,7 @@
 # CSharp
-Códigos desenvolvidos em aula
+
+
+Códigos desenvolvidos em aula para estudo
 
 Códigos desenvolvidos utilizando as seguintes ferramentas:
 
