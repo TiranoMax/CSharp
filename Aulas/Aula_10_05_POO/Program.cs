@@ -20,6 +20,10 @@ namespace Aula_10_05_POO
             Console.WriteLine(cliente.Nome);
             Console.WriteLine(cliente.Cpf);
 
+            //utilizando os construtores parametrizados
+            Cliente cliente1 = new Cliente("Jaque"); //nome
+            Cliente cliente2 = new Cliente("Iara", "1234"); //nome, cpf
+
             Console.ReadKey();
 
         }
