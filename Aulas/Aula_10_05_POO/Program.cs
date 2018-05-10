@@ -14,6 +14,9 @@ namespace Aula_10_05_POO
             cliente.Nome = "Marcos"; // set
             string nomeCliente = cliente.Nome; // get
 
+            cliente.Cpf = "12345678901";// set
+            string cpfCliente = cliente.Cpf; //get
+
 
 
         }
