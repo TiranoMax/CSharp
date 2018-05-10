@@ -15,5 +15,25 @@ namespace Aula_10_05_POO
         //propriedade
         public string Nome { get => nome; set => nome = value; }
         public string Cpf { get => cpf; set => cpf = value; }
+
+
+        //construtor
+        public Cliente(){//Construtor vazio
+
+        }
+
+        public Cliente(string nome){
+
+            Nome = nome;
+
+        }
+        
+        public Cliente(string nome , string cpf){
+
+            Nome = nome;
+            Cpf = cpf;
+
+        }
+
     }
 }

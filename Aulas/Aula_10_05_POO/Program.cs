@@ -17,7 +17,10 @@ namespace Aula_10_05_POO
             cliente.Cpf = "12345678901";// set
             string cpfCliente = cliente.Cpf; //get
 
+            Console.WriteLine(cliente.Nome);
+            Console.WriteLine(cliente.Cpf);
 
+            Console.ReadKey();
 
         }
     }
