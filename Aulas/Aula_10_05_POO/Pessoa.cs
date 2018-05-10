@@ -11,19 +11,19 @@ namespace Aula_10_05_POO
         public string Nome { get; set; }
         public string Cpf { get; set; }
 
-        public Cliente()
+        public Pessoa()
         {//Construtor vazio
 
         }
 
-        public Cliente(string nome)
+        public  Pessoa(string nome)
         {
 
             Nome = nome;
 
         }
 
-        public Cliente(string nome, string cpf)
+        public Pessoa(string nome, string cpf)
         {
 
             Nome = nome;

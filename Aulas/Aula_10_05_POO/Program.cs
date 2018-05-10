@@ -22,7 +22,9 @@ namespace Aula_10_05_POO
 
             //utilizando os construtores parametrizados
             Cliente cliente1 = new Cliente("Jaque"); //nome
-            Cliente cliente2 = new Cliente("Iara", "1234"); //nome, cpf
+            Console.WriteLine(cliente1.Nome);
+
+//Cliente cliente2 = new Cliente("Iara", "1234"); //nome, cpf
 
             Console.ReadKey();
 
