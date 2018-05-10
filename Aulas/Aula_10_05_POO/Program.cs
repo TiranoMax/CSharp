@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aula_10_05_POO
 {
@@ -24,7 +20,9 @@ namespace Aula_10_05_POO
             Cliente cliente1 = new Cliente("Jaque"); //nome
             Console.WriteLine(cliente1.Nome);
 
-//Cliente cliente2 = new Cliente("Iara", "1234"); //nome, cpf
+            Cliente cliente2 = new Cliente("Iara", "1234"); //nome, cpf
+
+            //Pessoa p = new Pessoa();
 
             Console.ReadKey();
 

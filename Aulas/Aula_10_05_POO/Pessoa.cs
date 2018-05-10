@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Aula_10_05_POO
+﻿namespace Aula_10_05_POO
 {
-    class Pessoa {
+    public abstract class Pessoa {
 
         public string Nome { get; set; }
         public string Cpf { get; set; }
