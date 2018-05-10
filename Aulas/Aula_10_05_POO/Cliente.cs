@@ -18,6 +18,11 @@ namespace Aula_10_05_POO
         public Cliente(string nome): base(nome){
 
         }
+
+        public Cliente(string nome, string cpf) : base(nome, cpf)
+        {
+                
+        }
         
     }
 }
