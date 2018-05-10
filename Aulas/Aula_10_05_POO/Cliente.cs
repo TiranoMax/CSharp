@@ -8,32 +8,7 @@ namespace Aula_10_05_POO
 {
     class Cliente
     {
-        //atributo
-        private string nome;
-        private string cpf;
         
-        //propriedade
-        public string Nome { get => nome; set => nome = value; }
-        public string Cpf { get => cpf; set => cpf = value; }
-
-
-        //construtor
-        public Cliente(){//Construtor vazio
-
-        }
-
-        public Cliente(string nome){
-
-            Nome = nome;
-
-        }
-        
-        public Cliente(string nome , string cpf){
-
-            Nome = nome;
-            Cpf = cpf;
-
-        }
 
     }
 }
