@@ -10,7 +10,9 @@ namespace Aula_10_05_POO
     {
         static void Main(string[] args)
         {
-
+            Cliente cliente = new Cliente();
+            cliente.Nome = "Marcos"; // set
+            string nomeCliente = cliente.Nome; // get
 
 
 
