@@ -14,7 +14,7 @@ namespace Aula_14_05_Interfaces
 
         public void Desacelerar()
         {
-            Velocidade += 3;
+            Velocidade -= 3;
         }
     }
 }
