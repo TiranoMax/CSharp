@@ -25,6 +25,10 @@
 
         }
 
-
+        override
+            public string ImprimirInfo()
+        {
+            return Nome + ", " + Cpf + ", " + DataNasc.ToShortDateString() + Idade;
+        }
     }
 }

@@ -39,5 +39,6 @@ namespace Aula_10_05_POO
                 
         }
         
+        public abstract void
     }
 }
