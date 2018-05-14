@@ -19,7 +19,7 @@ namespace Aula_14_05_Interfaces
 
         public void Desacelerar()
         {
-            throw new NotImplementedException();
+            Velocidade -= 5;
         }
     }
 }

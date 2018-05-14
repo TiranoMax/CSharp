@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Aula_14_05_Interfaces
 {
@@ -15,7 +12,9 @@ namespace Aula_14_05_Interfaces
             Console.WriteLine("Velocidade Inicial: " + car.Velocidade);
             car.Acelerar();
             car.Acelerar();
+            car.Desacelerar();
             Console.WriteLine("Velocidade Atual: " + car.Velocidade);
+            
             Console.ReadKey();
 
 
