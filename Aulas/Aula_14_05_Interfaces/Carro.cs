@@ -6,6 +6,12 @@ namespace Aula_14_05_Interfaces
     class Carro : IMeioTransporte
     {
         public int Velocidade { get; set; }
+        //chave para objeto Marca
+        public int MarcaID { get; set; }
+
+        //propriedade de navegacao
+
+        public virtual Marca _Marca { get; set; }
 
         public Carro()
         {
