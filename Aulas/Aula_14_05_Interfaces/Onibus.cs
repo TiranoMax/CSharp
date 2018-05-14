@@ -7,6 +7,8 @@ namespace Aula_14_05_Interfaces
     {
         public int Velocidade { get; set; }
 
+        public string Modelo { get; set; }
+
         //chave para objeto Marca
         public int MarcaID { get; set; }
 

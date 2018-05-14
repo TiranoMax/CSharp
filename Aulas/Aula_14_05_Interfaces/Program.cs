@@ -46,5 +46,20 @@ namespace Aula_14_05_Interfaces
                 meioTransporte.Acelerar();
             }
         }
+
+        static void CriarRelacionamentos()
+        {
+            Carro c = new Carro();
+            c.Modelo = "corsa";
+
+            Marca m = new Marca();
+            m.Nome = "Chevrolet";
+            c._Marca = m;
+
+            Onibus o = new Onibus();
+            c.Modelo = "3100";
+            o._Marca = m;
+
+        }
     }
 }
