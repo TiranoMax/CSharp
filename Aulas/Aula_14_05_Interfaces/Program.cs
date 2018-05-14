@@ -27,14 +27,16 @@ namespace Aula_14_05_Interfaces
             bus.Desacelerar();
             Console.WriteLine("Velocidade Atual: " + bus.Velocidade);
 
-            Console.ReadKey();
+            Console.WriteLine("\n\n");
 
             AcelerarBastante(car);
             Console.WriteLine(car.ImprimirInfo());
 
+            Console.WriteLine();
             AcelerarBastante(bus);
             Console.WriteLine(bus.ImprimirInfo());
 
+            Console.ReadKey();
         }
 
         static void AcelerarBastante(IMeioTransporte meioTransporte)
