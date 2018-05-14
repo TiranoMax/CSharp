@@ -29,6 +29,11 @@ namespace Aula_14_05_Interfaces
 
             Console.ReadKey();
 
+            AcelerarBastante(car);
+            Console.WriteLine(car.ImprimirInfo());
+
+            AcelerarBastante(bus);
+            Console.WriteLine(bus.ImprimirInfo());
 
         }
 
