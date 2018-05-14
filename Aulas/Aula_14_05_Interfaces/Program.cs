@@ -14,7 +14,15 @@ namespace Aula_14_05_Interfaces
             car.Acelerar();
             car.Desacelerar();
             Console.WriteLine("Velocidade Atual: " + car.Velocidade);
-            
+
+            Onibus bus = new Onibus();
+
+            Console.WriteLine("Velocidade Inicial: " + bus.Velocidade);
+            bus.Acelerar();
+            bus.Acelerar();
+            bus.Desacelerar();
+            Console.WriteLine("Velocidade Atual: " + bus.Velocidade);
+
             Console.ReadKey();
 
 

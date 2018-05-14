@@ -3,7 +3,18 @@
 
 namespace Aula_14_05_Interfaces
 {
-    class Onibus
+    class Onibus : IMeioTransporte
     {
+        public int Velocidade { get; set; }
+
+        public void Acelerar()
+        {
+            Velocidade += 5;
+        }
+
+        public void Desacelerar()
+        {
+            Velocidade += 3;
+        }
     }
 }
