@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 
 namespace Aula_14_05_Interfaces
 {
@@ -13,6 +13,9 @@ namespace Aula_14_05_Interfaces
         //propriedade de navegacao
 
         public virtual Marca _Marca { get; set; }
+
+        public List<Roda> Rodas { get; set; }
+
 
 
         public Carro()
