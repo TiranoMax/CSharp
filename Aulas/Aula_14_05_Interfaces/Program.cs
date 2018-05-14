@@ -31,5 +31,13 @@ namespace Aula_14_05_Interfaces
 
 
         }
+
+        static void AcelerarBastante(IMeioTransporte meioTransporte)
+        {
+            for(int i = 0; i < 20; i++)
+            {
+                meioTransporte.Acelerar();
+            }
+        }
     }
 }
