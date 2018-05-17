@@ -7,7 +7,7 @@ namespace Aula_17_05_Camadas.View
     class AtividadeView
     {
 
-        public int ExibirMenu()
+        public void ExibirMenu()
         {
             Console.WriteLine("========================");
             Console.WriteLine("= Escolha uma opção:   =");
@@ -19,7 +19,17 @@ namespace Aula_17_05_Camadas.View
             Console.WriteLine("========================");
 
             int opcao = int.Parse(Console.ReadLine());
-            return opcao;
+            switch (opcao)
+            {
+                case 1:
+                    CriarAtividade();
+                    break;
+
+                default:
+                    break;
+            }
+
+
         }
 
         public void CriarAtividade()
