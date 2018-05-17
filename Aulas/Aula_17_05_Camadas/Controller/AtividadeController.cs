@@ -22,6 +22,17 @@ namespace Aula_17_05_Camadas.Controller
         }
 
         //Ler
+        public Atividade BuscarPorID(int id)
+        {
+            foreach(Atividade a in ListarAtividades)
+            {
+                if(a.AtividadeId == id)
+                {
+                    return a;
+                }
+            }
+            return null;
+        }
         //Editar
         //Excluir
     }
