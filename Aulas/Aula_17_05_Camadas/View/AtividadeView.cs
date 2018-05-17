@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Aula_17_05_Camadas.Controller;
+using Aula_17_05_Camadas.Model;
+using System;
 
 namespace Aula_17_05_Camadas.View
 {
@@ -20,5 +22,17 @@ namespace Aula_17_05_Camadas.View
             return opcao;
         }
 
+        public void CriarAtividade()
+        {
+            Atividade atividade = new Atividade();
+
+            Console.WriteLine("Digite o nome da atividade: ");
+            atividade.Nome = Console.ReadLine();
+
+            atividade.Ativo = true;
+
+            AtividadeController atividadeCtrl = new AtividadeController();
+            atividadeCtrl.Salvar(atividade);
+        }
     }
 }
