@@ -45,7 +45,15 @@ namespace Aula_17_05_Camadas.Controller
             }
         }
 
-
         //Excluir
+        public void Excluir(int id)
+        {
+            Atividade atividade = BuscarPorID(id);
+
+            if (atividade != null)
+            {
+                ListarAtividades.Remove(atividade);
+            }
+        }
     }
 }
