@@ -8,7 +8,13 @@ namespace Aula_17_05_Camadas.Controller
 
         //simulando tabela
         public List<Atividade> ListarAtividades { get; set; }
+
         //Salvar
+        public void salvar (Atividade atividade)
+        {
+            ListarAtividades.Add(atividade);
+        }
+
         //Listar
         //Ler
         //Editar
