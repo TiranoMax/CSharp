@@ -16,6 +16,11 @@ namespace Aula_17_05_Camadas.Controller
         }
 
         //Listar
+        public List<Atividade> listar()
+        {
+            return ListarAtividades;
+        }
+
         //Ler
         //Editar
         //Excluir
