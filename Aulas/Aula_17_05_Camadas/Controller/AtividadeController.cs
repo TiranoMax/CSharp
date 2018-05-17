@@ -7,11 +7,18 @@ namespace Aula_17_05_Camadas.Controller
     {
 
         //simulando tabela
-        public List<Atividade> ListarAtividades { get; set; }
+        private static List<Atividade> ListarAtividades { get; set; }
+
+        static AtividadeController()
+        {
+            ListarAtividades = new List<Atividade>();
+        }
+
 
         //Salvar
         public void Salvar (Atividade atividade)
         {
+            atividade.AtividadeId = ListarAtividades.Count + 1;
             ListarAtividades.Add(atividade);
         }
 

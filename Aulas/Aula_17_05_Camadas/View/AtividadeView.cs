@@ -9,30 +9,138 @@ namespace Aula_17_05_Camadas.View
 
         public void ExibirMenu()
         {
-            Console.WriteLine("========================");
-            Console.WriteLine("= Escolha uma opção:   =");
-            Console.WriteLine("= 1) Criar Atividade   =");
-            Console.WriteLine("= 2) Listar Atividade  =");
-            Console.WriteLine("= 3) Buscar Atividade  =");
-            Console.WriteLine("= 4) Editar Atividade  =");
-            Console.WriteLine("= 5) Excluir Atividade =");
-            Console.WriteLine("========================");
+            int opcao = 9;
 
-            int opcao = int.Parse(Console.ReadLine());
-            switch (opcao)
+            do
             {
-                case 1:
-                    CriarAtividade();
-                    break;
 
+                Console.WriteLine("========================");
+                Console.WriteLine("= Escolha uma opção:   =");
+                Console.WriteLine("= 1) Criar Atividade   =");
+                Console.WriteLine("= 2) Listar Atividade  =");
+                Console.WriteLine("= 3) Buscar Atividade  =");
+                Console.WriteLine("= 4) Editar Atividade  =");
+                Console.WriteLine("= 5) Excluir Atividade =");
+                Console.WriteLine("= 9) Sair =");
+                Console.WriteLine("========================");
+
+                opcao = int.Parse(Console.ReadLine());
+
+                switch (opcao)
+                {
+                    case 1:
+                        CriarAtividade();
+                        break;
+
+                    case 2:
+                        ListarAtividade();
+                        break;
+                        
+                    case 3:
+                        BuscarAtividade();
+                        break;
+
+                    case 4:
+                        EditarAtividade();
+                        break;
+
+                    case 5:
+                        ExcluirAtividade();
+                        break;
+
+                    case 9:
+                        break;
+                
                 default:
-                    break;
-            }
+                        break;
+                }
+
+            } while (opcao != 9);
+
+            
 
 
         }
 
+        private void ExcluirAtividade()
+        {
+            ListarAtividade();
+            Console.WriteLine("Digite o id da atividade que deseja excluir: ");
+            int id = int.Parse(Console.ReadLine());
+
+            AtividadeController atividadeCtrl = new AtividadeController();
+            atividadeCtrl.Excluir(id);
+
+        }
+
+        private void EditarAtividade()
+        {
+            ListarAtividade();
+            Console.WriteLine("Digite o id da atividade que deseja editar: ");
+            int id = int.Parse(Console.ReadLine());
+
+            Atividade atividadeAtualizada = ObeterDadosAtividade();
+
+            AtividadeController atividadeCtrl = new AtividadeController();
+            atividadeCtrl.Editar(id, atividadeAtualizada);
+
+
+        }
+
+        private void BuscarAtividade()
+        {
+            AtividadeController atividadeCtrl = new AtividadeController();
+            Console.Write("Digite o id da Atividade: ");
+            int id = int.Parse(Console.ReadLine());
+
+            Atividade atividade = atividadeCtrl.BuscarPorID(id);
+
+            if (atividade != null)
+            {
+                ExibirDetalhesAtividade(atividade);
+            }
+            else
+            {
+                Console.WriteLine("Atividade não encontrada");
+            }
+            Console.ReadKey();
+        }
+
+
+        private void ListarAtividade()
+        {
+            AtividadeController atividadeCtrl = new AtividadeController();
+
+            foreach (Atividade atividade in atividadeCtrl.Listar())
+            {
+                ExibirDetalhesAtividade(atividade);
+
+            }
+            Console.WriteLine("Fim da lista");
+            Console.ReadKey();
+        }
+
+        
+        private static void ExibirDetalhesAtividade(Atividade atividade)
+        {
+            Console.WriteLine("---");
+            Console.WriteLine("Id: " + atividade.AtividadeId);
+            Console.WriteLine("Nome: " + atividade.Nome);
+            Console.WriteLine("Ativo: " + atividade.Ativo);
+            Console.WriteLine("---");
+        }
+
+        
         public void CriarAtividade()
+        {
+            Atividade atividade = ObeterDadosAtividade();
+
+            AtividadeController atividadeCtrl = new AtividadeController();
+            atividadeCtrl.Salvar(atividade);
+        }
+
+
+        private static Atividade ObeterDadosAtividade()
         {
             Atividade atividade = new Atividade();
 
@@ -40,9 +148,7 @@ namespace Aula_17_05_Camadas.View
             atividade.Nome = Console.ReadLine();
 
             atividade.Ativo = true;
-
-            AtividadeController atividadeCtrl = new AtividadeController();
-            atividadeCtrl.Salvar(atividade);
+            return atividade;
         }
     }
 }
