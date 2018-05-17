@@ -1,4 +1,7 @@
-﻿namespace Aula_17_05_Camadas.Controller
+﻿using Aula_17_05_Camadas.Model;
+using System.Collections.Generic;
+
+namespace Aula_17_05_Camadas.Controller
 {
     class AtividadeController
     {
