@@ -10,18 +10,18 @@ namespace Aula_17_05_Camadas.Controller
         public List<Atividade> ListarAtividades { get; set; }
 
         //Salvar
-        public void salvar (Atividade atividade)
+        public void Salvar (Atividade atividade)
         {
             ListarAtividades.Add(atividade);
         }
 
         //Listar
-        public List<Atividade> listar()
+        public List<Atividade> Listar()
         {
             return ListarAtividades;
         }
 
-        //Ler
+        //BuscarPorID
         public Atividade BuscarPorID(int id)
         {
             foreach(Atividade a in ListarAtividades)
@@ -34,6 +34,18 @@ namespace Aula_17_05_Camadas.Controller
             return null;
         }
         //Editar
+        public void Editar(int id, Atividade atividadeAtualizada)
+        {
+            Atividade atividadeAntiga = BuscarPorID(id);
+
+            if (atividadeAntiga != null)
+            {
+                atividadeAntiga.Nome = atividadeAtualizada.Nome;
+                atividadeAntiga.Ativo = atividadeAtualizada.Ativo;
+            }
+        }
+
+
         //Excluir
     }
 }
