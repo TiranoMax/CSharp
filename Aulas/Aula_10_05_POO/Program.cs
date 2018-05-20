@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Aula_10_05_POO
 {
     class Program
@@ -28,7 +29,7 @@ namespace Aula_10_05_POO
 
             //Pessoa p = new Pessoa(); ERRO: classes abstratas não podem ser instanciadas
 
-            //Console.WriteLine("Dados cliente 2: " + cliente2.ImprimirInfo);
+            Console.WriteLine("Dados cliente 2: " + cliente2.ImprimirInfo());
 
             Console.ReadKey();
 
