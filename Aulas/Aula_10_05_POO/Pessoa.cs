@@ -25,10 +25,8 @@
 
         }
 
-        /*override
-            public string ImprimirInfo()
-        {
-            return Nome + ", " + Cpf + ", " + DataNasc.ToShortDateString() + Idade;
-        }*/
+
+        public  abstract string ImprimirInfo();
+       
     }
 }
