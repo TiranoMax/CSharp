@@ -7,6 +7,19 @@ namespace Aula_17_05_Camadas.View
     class AtividadeView
     {
 
+        private AtividadeController atividadeCtrl;
+
+       
+
+
+        public AtividadeView()
+        {
+            atividadeCtrl = new AtividadeController();
+        }
+
+
+
+
         public void ExibirMenu()
         {
             int opcao = 9;
@@ -67,8 +80,6 @@ namespace Aula_17_05_Camadas.View
             ListarAtividade();
             Console.WriteLine("Digite o id da atividade que deseja excluir: ");
             int id = int.Parse(Console.ReadLine());
-
-            AtividadeController atividadeCtrl = new AtividadeController();
             atividadeCtrl.Excluir(id);
 
         }
@@ -81,7 +92,6 @@ namespace Aula_17_05_Camadas.View
 
             Atividade atividadeAtualizada = ObeterDadosAtividade();
 
-            AtividadeController atividadeCtrl = new AtividadeController();
             atividadeCtrl.Editar(id, atividadeAtualizada);
 
 
@@ -89,7 +99,7 @@ namespace Aula_17_05_Camadas.View
 
         private void BuscarAtividade()
         {
-            AtividadeController atividadeCtrl = new AtividadeController();
+            
             Console.Write("Digite o id da Atividade: ");
             int id = int.Parse(Console.ReadLine());
 
@@ -109,7 +119,6 @@ namespace Aula_17_05_Camadas.View
 
         private void ListarAtividade()
         {
-            AtividadeController atividadeCtrl = new AtividadeController();
 
             foreach (Atividade atividade in atividadeCtrl.Listar())
             {
@@ -134,8 +143,6 @@ namespace Aula_17_05_Camadas.View
         public void CriarAtividade()
         {
             Atividade atividade = ObeterDadosAtividade();
-
-            AtividadeController atividadeCtrl = new AtividadeController();
             atividadeCtrl.Salvar(atividade);
         }
 
