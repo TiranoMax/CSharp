@@ -208,7 +208,25 @@ namespace Aula_17_05_Camadas.View
             Console.ReadKey();
         }
 
-        
+        private void ListarAtivosOrInativos()
+        {
+            Console.Write("Listar Ativos ou inativos (a/i): ");
+            bool opcao = Console.ReadLine() == "a" ? true : false;
 
+            List<Atividade> lista = atividadeCtrl.ListarAtividadeAtivosOrInativos(opcao);
+
+            if (lista.Count > 0)
+            {
+                foreach (Atividade a in lista)
+                {
+                    ExibirDetalhesAtividade(a);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Nada encontrado");
+            }
+            Console.ReadKey();
+        }
     }
 }
