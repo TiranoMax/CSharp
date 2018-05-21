@@ -62,5 +62,37 @@ namespace Aula_17_05_Camadas.Controller
                 ListarAtividades.Remove(atividade);
             }
         }
+
+        public List<Atividade> BuscarAtividadePorNome(string Nome)
+        {
+            List<Atividade> atividadeSelecionadas = new List<Atividade>();
+            foreach (Atividade nome in ListarAtividades)
+            {
+                if (nome.Nome == Nome)
+                {
+                    atividadeSelecionadas.Add(nome);
+                }
+            }
+            return atividadeSelecionadas;
+    
+        }
+
+
+        public Atividade ListarAtividadeAtivos(bool Ativo)
+        {
+            foreach (Atividade ativos in ListarAtividades)
+            {
+                if (ativos.Ativo == Ativo)
+                {
+                    return ativos;
+                }
+                else
+                {
+                    return ativos;
+                }
+            }
+            return null;
+
+        }
     }
 }
