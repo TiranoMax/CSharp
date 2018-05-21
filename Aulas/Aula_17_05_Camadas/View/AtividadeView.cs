@@ -40,17 +40,17 @@ namespace Aula_17_05_Camadas.View
             do
             {
 
-                Console.WriteLine("========================================");
-                Console.WriteLine("= Escolha uma opção:                   =");
-                Console.WriteLine("= 1) Criar Atividade                   =");
-                Console.WriteLine("= 2) Listar Atividade                  =");
-                Console.WriteLine("= 3) Buscar Atividade                  =");
-                Console.WriteLine("= 4) Editar Atividade                  =");
-                Console.WriteLine("= 5) Excluir Atividade                 =");
-                Console.WriteLine("= 6) Buscar por Nome                   =");
-                Console.WriteLine("= 7) Listar Atividade (Ativos/Inativos =");
-                Console.WriteLine("= 9) Sair                              =");
-                Console.WriteLine("========================================");
+                Console.WriteLine("=========================================");
+                Console.WriteLine("= Escolha uma opção:                    =");
+                Console.WriteLine("= 1) Criar Atividade                    =");
+                Console.WriteLine("= 2) Listar Atividade                   =");
+                Console.WriteLine("= 3) Buscar Atividade                   =");
+                Console.WriteLine("= 4) Editar Atividade                   =");
+                Console.WriteLine("= 5) Excluir Atividade                  =");
+                Console.WriteLine("= 6) Buscar por Nome                    =");
+                Console.WriteLine("= 7) Listar Atividade (Ativos/Inativos) =");
+                Console.WriteLine("= 9) Sair                               =");
+                Console.WriteLine("=========================================");
 
                 opcao = (OpcoesMenu)int.Parse(Console.ReadLine());
 
@@ -157,11 +157,11 @@ namespace Aula_17_05_Camadas.View
         
         private static void ExibirDetalhesAtividade(Atividade atividade)
         {
-            Console.WriteLine("---");
+            Console.WriteLine("---------------------------------");
             Console.WriteLine("Id: " + atividade.AtividadeId);
             Console.WriteLine("Nome: " + atividade.Nome);
             Console.WriteLine("Ativo: " + atividade.Ativo);
-            Console.WriteLine("---");
+            Console.WriteLine("---------------------------------");
         }
 
         
