@@ -9,7 +9,15 @@ namespace Aula_17_05_Camadas.View
 
         private AtividadeController atividadeCtrl;
 
-       
+        enum OpcoesMenu
+        {
+            CriarAtividade = 1,
+            ListarAtividade = 2,
+            BuscarAtividade = 3,
+            EditarAtividade = 4,
+            ExcluirAtividade = 5,
+            Sair = 9
+        }
 
 
         public AtividadeView()
@@ -22,7 +30,9 @@ namespace Aula_17_05_Camadas.View
 
         public void ExibirMenu()
         {
-            int opcao = 9;
+
+            OpcoesMenu opcao = OpcoesMenu.Sair;
+            
 
             do
             {
@@ -34,41 +44,41 @@ namespace Aula_17_05_Camadas.View
                 Console.WriteLine("= 3) Buscar Atividade  =");
                 Console.WriteLine("= 4) Editar Atividade  =");
                 Console.WriteLine("= 5) Excluir Atividade =");
-                Console.WriteLine("= 9) Sair =");
+                Console.WriteLine("= 9) Sair              =");
                 Console.WriteLine("========================");
 
-                opcao = int.Parse(Console.ReadLine());
+                opcao = (OpcoesMenu)int.Parse(Console.ReadLine());
 
                 switch (opcao)
                 {
-                    case 1:
+                    case OpcoesMenu.CriarAtividade:
                         CriarAtividade();
                         break;
 
-                    case 2:
+                    case OpcoesMenu.ListarAtividade:
                         ListarAtividade();
                         break;
                         
-                    case 3:
+                    case OpcoesMenu.BuscarAtividade:
                         BuscarAtividade();
                         break;
 
-                    case 4:
+                    case OpcoesMenu.EditarAtividade:
                         EditarAtividade();
                         break;
 
-                    case 5:
+                    case OpcoesMenu.ExcluirAtividade:
                         ExcluirAtividade();
                         break;
 
-                    case 9:
+                    case OpcoesMenu.Sair:
                         break;
                 
                 default:
                         break;
                 }
 
-            } while (opcao != 9);
+            } while (opcao != OpcoesMenu.Sair);
 
             
 
