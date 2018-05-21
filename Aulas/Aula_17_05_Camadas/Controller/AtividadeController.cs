@@ -68,7 +68,7 @@ namespace Aula_17_05_Camadas.Controller
             List<Atividade> atividadeSelecionadas = new List<Atividade>();
             foreach (Atividade nome in ListarAtividades)
             {
-                if (nome.Nome == Nome)
+                if (nome.Nome.Contains(Nome))
                 {
                     atividadeSelecionadas.Add(nome);
                 }
