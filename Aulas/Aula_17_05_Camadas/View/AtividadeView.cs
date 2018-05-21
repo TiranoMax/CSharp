@@ -16,6 +16,8 @@ namespace Aula_17_05_Camadas.View
             BuscarAtividade = 3,
             EditarAtividade = 4,
             ExcluirAtividade = 5,
+            BuscarAtividadePorNome = 6,
+            ListarAtivosOrInativos = 7,
             Sair = 9
         }
 
@@ -37,15 +39,17 @@ namespace Aula_17_05_Camadas.View
             do
             {
 
-                Console.WriteLine("========================");
-                Console.WriteLine("= Escolha uma opção:   =");
-                Console.WriteLine("= 1) Criar Atividade   =");
-                Console.WriteLine("= 2) Listar Atividade  =");
-                Console.WriteLine("= 3) Buscar Atividade  =");
-                Console.WriteLine("= 4) Editar Atividade  =");
-                Console.WriteLine("= 5) Excluir Atividade =");
-                Console.WriteLine("= 9) Sair              =");
-                Console.WriteLine("========================");
+                Console.WriteLine("========================================");
+                Console.WriteLine("= Escolha uma opção:                   =");
+                Console.WriteLine("= 1) Criar Atividade                   =");
+                Console.WriteLine("= 2) Listar Atividade                  =");
+                Console.WriteLine("= 3) Buscar Atividade                  =");
+                Console.WriteLine("= 4) Editar Atividade                  =");
+                Console.WriteLine("= 5) Excluir Atividade                 =");
+                Console.WriteLine("= 6) Buscar por Nome                   =");
+                Console.WriteLine("= 7) Listar Atividade (Ativos/Inativos =");
+                Console.WriteLine("= 9) Sair                              =");
+                Console.WriteLine("========================================");
 
                 opcao = (OpcoesMenu)int.Parse(Console.ReadLine());
 
@@ -71,10 +75,20 @@ namespace Aula_17_05_Camadas.View
                         ExcluirAtividade();
                         break;
 
+                    case OpcoesMenu.BuscarAtividadePorNome:
+                        BuscarAtividadePorNome();
+                        break;
+
+                    case OpcoesMenu.ListarAtivosOrInativos:
+                        ListarAtivosOrInativos();
+                        break;
+
                     case OpcoesMenu.Sair:
                         break;
                 
                 default:
+                        Console.Write("Opção invalida! ");
+                        Console.ReadKey();
                         break;
                 }
 
@@ -164,8 +178,29 @@ namespace Aula_17_05_Camadas.View
             Console.WriteLine("Digite o nome da atividade: ");
             atividade.Nome = Console.ReadLine();
 
-            atividade.Ativo = true;
+            Console.Write("Ativo? (s/n): ");
+            atividade.Ativo = Console.ReadLine() == "s" ? true : false;
+
             return atividade;
         }
+
+
+        private void BuscarAtividadePorNome()
+        {
+
+            Console.Write("Digite o Nome da Atividade: ");
+            String Nome = Console.ReadLine();
+
+            foreach (Atividade a in atividadeCtrl.BuscarAtividadePorNome(Nome))
+            {
+                ExibirDetalhesAtividade(a);
+            }
+
+            Console.WriteLine(" -- Fim da lista --");
+            Console.ReadKey();
+        }
+
+       
+
     }
 }
