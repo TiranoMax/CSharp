@@ -77,22 +77,17 @@ namespace Aula_17_05_Camadas.Controller
         }
 
 
-        public List<Atividade> ListarAtividadeAtivos(bool Ativo)
+        public List<Atividade> ListarAtividadeAtivosOrInativos(bool ativo)
         {
-            List<Atividade> atividadeSelecionadas = new List<Atividade>();
-            foreach (Atividade ativos in ListarAtividades)
-            {
-                if (ativos.Ativo == Ativo)
-                {
-                     atividadeSelecionadas.Add(ativos);
-                }
-                else
-                {
-                    atividadeSelecionadas.Add(ativos);
-                }
-            }
-            return atividadeSelecionadas;
+            IEnumerable<Atividade> atividadeSelecionadas = new List<Atividade>();
 
+            atividadeSelecionadas = from x in ListarAtividades
+                                    where x.Ativo == ativo
+                                    select x;
+
+
+
+            return atividadeSelecionadas.ToList();
         }
     }
 }
