@@ -1,6 +1,7 @@
 ﻿using Aula_17_05_Camadas.Controller;
 using Aula_17_05_Camadas.Model;
 using System;
+using System.Collections.Generic;
 
 namespace Aula_17_05_Camadas.View
 {
@@ -191,16 +192,23 @@ namespace Aula_17_05_Camadas.View
             Console.Write("Digite o Nome da Atividade: ");
             String Nome = Console.ReadLine();
 
-            foreach (Atividade a in atividadeCtrl.BuscarAtividadePorNome(Nome))
-            {
-                ExibirDetalhesAtividade(a);
-            }
+            List<Atividade> lista = atividadeCtrl.BuscarAtividadePorNome(Nome);
 
-            Console.WriteLine(" -- Fim da lista --");
+            if(lista.Count > 0 )
+            {
+                foreach (Atividade a in lista)
+                {
+                    ExibirDetalhesAtividade(a);
+
+                }
+            }else
+            {
+                Console.WriteLine("Nada encontrado");
+            }
             Console.ReadKey();
         }
 
-       
+        
 
     }
 }
