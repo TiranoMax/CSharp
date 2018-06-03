@@ -1,5 +1,6 @@
 ﻿using Aula_17_05_Camadas.Model;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Aula_17_05_Camadas.Controller
 {
@@ -61,6 +62,32 @@ namespace Aula_17_05_Camadas.Controller
             {
                 ListarAtividades.Remove(atividade);
             }
+        }
+
+        public List<Atividade> BuscarAtividadePorNome(string Nome)
+        {
+            IEnumerable<Atividade> atividadeSelecionadas = new List<Atividade>();
+
+            atividadeSelecionadas = from x in ListarAtividades
+                                    where x.Nome.ToLower().Contains(Nome.ToLower())
+                                    select x;
+
+            return atividadeSelecionadas.ToList();
+    
+        }
+
+
+        public List<Atividade> ListarAtividadeAtivosOrInativos(bool ativo)
+        {
+            IEnumerable<Atividade> atividadeSelecionadas = new List<Atividade>();
+
+            atividadeSelecionadas = from x in ListarAtividades
+                                    where x.Ativo == ativo
+                                    select x;
+
+
+
+            return atividadeSelecionadas.ToList();
         }
     }
 }
