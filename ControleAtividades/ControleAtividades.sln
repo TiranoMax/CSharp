@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleAtividades", "ControleAtividades\ControleAtividades.csproj", "{5D34C1A3-1FB6-4933-8A4D-D3BE68117542}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleView", "ControleAtividades\ConsoleView.csproj", "{5D34C1A3-1FB6-4933-8A4D-D3BE68117542}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
